@@ -1,7 +1,6 @@
 package pt.unl.fct.iadi.orderprocessingplatform.domain
 
-class PaymentRequest(
+data class PaymentRequest(
     val orderId: String,
     val amount: Double
-) {
-}
+)
