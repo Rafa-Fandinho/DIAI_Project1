@@ -1,4 +1,5 @@
 package pt.unl.fct.iadi.orderprocessingplatform.domain
 
-class ReceiptStatus {
+enum class ReceiptStatus {
+    PAID, REJECTED, FLAGGED_FOR_REVIEW
 }
