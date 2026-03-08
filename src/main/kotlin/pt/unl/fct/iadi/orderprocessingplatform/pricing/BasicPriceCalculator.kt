@@ -8,10 +8,10 @@ import pt.unl.fct.iadi.orderprocessingplatform.domain.Order
 @ConditionalOnProperty(name = ["pricing.promo.enabled"], havingValue = "false", matchIfMissing = true)
 class BasicPriceCalculator : PriceCalculator {
     override fun calculateTotalPrice(order: Order): Double {
-        var Sum = 0.0
+        var sum = 0.0
         for (items in order.items) {
-            Sum += items.unitPrice * items.quantity
+            sum += items.unitPrice * items.quantity
         }
-        return Sum
+        return sum
     }
 }
